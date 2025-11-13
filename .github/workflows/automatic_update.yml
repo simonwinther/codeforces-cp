@@ -33,7 +33,7 @@ jobs:
         run: python .scripts/update_readme.py
 
       - name: Run BUILD docs script
-        run: python .scripts/build_docs.py
+        run: python .scripts/update_docs.py
 
       - name: Commit and push changes
         env:
@@ -61,6 +61,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./docs
 
