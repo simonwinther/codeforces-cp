@@ -4,7 +4,7 @@
 
 <!-- START_TABLE_OF_CONTENTS -->
 ## Table of Contents
-- [🔗 Kattis Profile](#-kattis-profile)
+- [🔗 Codeforce Profile](https://codeforces.com/profile/simonwinther)
 - [Total problems solved: 102](#total-problems-solved-102)
 - [📂 Directory Structure](#-directory-structure)
 <!-- END_TABLE_OF_CONTENTS -->
