@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kattis Solutions by Simon</title>
+  <title>Codeforces Solutions by Simon</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
 </head>
@@ -12,20 +12,24 @@
 <body>
   <header>
     <h1>
-      <a href="https://github.com/simonsejse/competetive-programming" target="_blank">
-        Competitive Programming Solutions
+      <a href="https://github.com/simonwinther/codeforces-cp" target="_blank">
+        Codeforces Solutions
       </a>
     </h1>
-    <a href="https://open.kattis.com/users/simonwinther" target="_blank"> profile </a>
-    <a href="https://github.com/simonsejse/competetive-programming" target="_blank">
-      github
+    <a href="https://codeforces.com/profile/simonwinther" target="_blank"> Codeforces profile </a>
+    <a href="https://github.com/simonwinther/codeforces-cp" target="_blank">
+      GitHub
     </a>
   </header>
+
   <h2>
-  Visiters
+    Visitors
   </h2>
-  <img alt="Visitors" src="https://count.getloli.com/@simonsejse?name=simonsejse&theme=booru-r6gdrawfriends&padding=10&offset=0&scale=1&pixelated=1&darkmode=1" />
-  <h2>Kattis Solutions</h2>
+  <img alt="Visitors"
+    src="https://count.getloli.com/@codeforces-simonwinther?name=codeforces-simonwinther&theme=booru-r6gdrawfriends&padding=10&offset=0&scale=1&pixelated=1&darkmode=1" />
+
+
+  <h2>Codeforces Solutions</h2>
   <p id="last-updated"></p>
   <table id="open-kattis-table">
     <thead>
@@ -37,65 +41,31 @@
       </tr>
     </thead>
     <tbody>
-    <!-- START_PROBLEM -->
+      <!-- START_PROBLEM -->
+      <!-- rows will be auto-inserted by build_docs.py -->
 
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/263/A">A. Beautiful Matrix</a></td>
-            <td>263A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/282/A">A. Bit</a></td>
-            <td>282A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/50/A">A. Domino Piling</a></td>
-            <td>50A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/158/A">A. Next Round</a></td>
-            <td>158A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/4/A">A. Watermelon</a></td>
-            <td>4A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>
-        <tr>
-            <td><a href="https://codeforces.com/problemset/problem/71/A">A. Way Too Long Words</a></td>
-            <td>71A</td>
-            <td>800</td>
-            <td class="language-icon"><a href="#"><img alt="cpp" src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/cpp/cpp_24x24.png" /></a></td>
-        </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>                </tr>    <!-- END_PROBLEM -->
+      <!-- END_PROBLEM -->
     </tbody>
   </table>
   <p>
     ©
-    <a href="https://github.com/simonsejse" target="_blank"> Simon </a> 2024.
+    <a href="https://github.com/simonwinther" target="_blank"> Simon </a> 2024.
     All rights reserved.
   </p>
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"></script>
   <script>
     // Initialize the table
     new window.simpleDatatables.DataTable("#open-kattis-table", {
-    perPage: 10,
-    perPageSelect: [10, 25, 50, 100, ["All", -1]],
-    searchable: true,
-    sortable: true,
-    fixedHeight: false,
-    labels: {
+      perPage: 10,
+      perPageSelect: [10, 25, 50, 100, ["All", -1]],
+      searchable: true,
+      sortable: true,
+      fixedHeight: false,
+      labels: {
         placeholder: "Search...",
         noRows: "No entries found",
         info: "Showing {start} to {end} of {rows} entries",
-    },
+      },
     });
     // Auto-update the date
     document.getElementById("last-updated").textContent =
