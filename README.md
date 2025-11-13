@@ -5,7 +5,7 @@
 <!-- Note to myself that this below is generated from TOC generator from util.py (hence i cannot grep this content) -->
 <!-- START_TABLE_OF_CONTENTS -->
 ## Table of Contents
-- [🔗 Kattis Profile](#-kattis-profile)
+- [🔗 Codeforces Profile](#-codeforces-profile)
 - [Total problems solved: 6](#total-problems-solved-6)
 - [📂 Directory Structure](#-directory-structure)
 <!-- END_TABLE_OF_CONTENTS -->
