@@ -29,7 +29,7 @@ for file in sorted(os.listdir("solutions")):
 
     pid = file.rsplit(".", 1)[0]  # 'a_beautiful_matrix'
     repo_url = (
-        "https://github.com/simonwinther/codeforces-cp/tree/main/solutions/"
+        "https://github.com/simonwinther/codeforces-cp/blob/HEAD/solutions/"
         f"{file}"
     )
 
