@@ -39,9 +39,15 @@ def build_problem_table():
         # language icon
         lang_icon = ""
         if file not in file_whitelist:
-            lang_icon = (
-                f'<a href="#"><img alt="{ext}" src="{get_image(ext)}" /></a>'
+            repo_url = (
+                "https://github.com/simonwinther/codeforces-cp/tree/main/solutions/"
+                f"{file}"
             )
+            lang_icon = (
+                f'<a href="{repo_url}" target="_blank">'
+                f'<img alt="{ext}" src="{get_image(ext)}" /></a>'
+            )
+
 
         row = f"""
         <tr>

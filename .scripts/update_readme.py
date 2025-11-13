@@ -29,8 +29,8 @@ for file in sorted(os.listdir("solutions")):
 
     pid = file.rsplit(".", 1)[0]  # 'a_beautiful_matrix'
     repo_url = (
-        "https://github.com/simonsejse/competitive-programming/tree/main/"
-        f"solutions/{file}"
+        "https://github.com/simonwinther/codeforces-cp/tree/main/solutions/"
+        f"{file}"
     )
 
     info = get_problem_info(pid, difficulty_cache)
