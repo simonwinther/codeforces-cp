@@ -40,7 +40,7 @@ def build_problem_table():
         lang_icon = ""
         if file not in file_whitelist:
             repo_url = (
-                "https://github.com/simonwinther/codeforces-cp/tree/main/solutions/"
+                "https://github.com/simonwinther/codeforces-cp/blob/HEAD/solutions/"
                 f"{file}"
             )
             lang_icon = (
