@@ -30,5 +30,13 @@
     "b_queue_at_the_school": {
         "difficulty": "800",
         "last_updated": "2025-11-14"
+    },
+    "a_helpful_maths": {
+        "difficulty": "800",
+        "last_updated": "2025-11-14"
+    },
+    "a_word_capitalization": {
+        "difficulty": "800",
+        "last_updated": "2025-11-14"
     }
 }
