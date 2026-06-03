@@ -26,14 +26,16 @@ using namespace std;
 // factors before using more complicated methods on the numbers that pass this
 // filter.
 //
-int is_prime(int n) {
-  for (int i = 2; i < sqrt(n); i++) {
+int is_prime(long long n) {
+  if (n <= 1)
+    return 0;
+  for (int i = 2; i <= sqrt(n); i++) {
     if (n % i == 0) {
       // evenly divides means composite, o.w. prime
       return 0;
     }
   }
-  // no envenly divides from [2, sqrt(n)], means prime
+  // no evenly divides from [2, sqrt(n)], means prime
   return 1;
 }
 
@@ -48,7 +50,7 @@ int main() {
     int x, k;
     cin >> x >> k;
 
-    int y = 0;
+    long long y = 0;
     // 52 * 10^4 + 52 * 10^2 + 52
     for (int i = 0; i < k; i++) {
       // If 0-9 steps=1, if 10-99 then steps=2, if 100-999 then steps=3, ...
