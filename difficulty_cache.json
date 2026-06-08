@@ -1,50 +1,54 @@
 {
+    "A. Elephant": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
+    },
+    "C. Simple Repetition": {
+        "difficulty": "1000",
+        "last_updated": "2026-06-08"
+    },
     "a_beautiful_matrix": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
     },
     "a_bit": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
-    },
-    "a_domino_piling": {
-        "difficulty": "800",
-        "last_updated": "2026-06-03"
-    },
-    "a_next_round": {
-        "difficulty": "800",
-        "last_updated": "2026-06-03"
-    },
-    "a_watermelon": {
-        "difficulty": "800",
-        "last_updated": "2026-06-03"
-    },
-    "a_way_too_long_words": {
-        "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
     },
     "a_boy_or_girl": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
     },
-    "b_queue_at_the_school": {
+    "a_convergence": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
+    },
+    "a_domino_piling": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
     },
     "a_helpful_maths": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
+    },
+    "a_next_round": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
+    },
+    "a_watermelon": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
+    },
+    "a_way_too_long_words": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
     },
     "a_word_capitalization": {
         "difficulty": "800",
-        "last_updated": "2026-06-03"
+        "last_updated": "2026-06-08"
     },
-    "A. Elephant": {
-        "difficulty": "N/A",
-        "last_updated": "2026-06-03"
-    },
-    "C. Simple Repetition": {
-        "difficulty": "N/A",
-        "last_updated": "2026-06-03"
+    "b_queue_at_the_school": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
     }
 }

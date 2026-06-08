@@ -1,1 +1,7 @@
-.ast
+.ast/
+.testcases/
+*.testcases
+*_input*.txt
+*_output*.txt
+__pycache__/
+*.pyc

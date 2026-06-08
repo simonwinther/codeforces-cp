@@ -8,6 +8,8 @@ import requests
 
 # Constants
 CACHE_EXPIRY_DAYS = 60
+SOLUTIONS_DIR = "solutions"
+REPO_BLOB_URL = "https://github.com/simonwinther/codeforces-cp/blob/HEAD"
 
 # Map extensions to languages
 image_mapper = {
@@ -32,6 +34,40 @@ def get_image(ext: str, size: int = 24) -> str:
         "https://raw.githubusercontent.com/abrahamcalf/"
         f"programming-languages-logos/master/src/{lang}/{lang}_{size}x{size}.png"
     )
+
+
+# ---------- Solution discovery ----------
+
+def iter_solution_files(solution_dir: str = SOLUTIONS_DIR):
+    """
+    Yield supported source files that count as solved problems.
+
+    Draft files in the repository root are intentionally ignored; moving a file
+    into solutions/ is the publishing step for README and docs generation.
+    """
+    if not os.path.isdir(solution_dir):
+        return
+
+    for file in sorted(os.listdir(solution_dir)):
+        file_path = os.path.join(solution_dir, file)
+
+        if not os.path.isfile(file_path):
+            continue
+
+        ext = file.rsplit(".", 1)[-1] if "." in file else ""
+        if ext not in image_mapper:
+            continue
+
+        pid = file.rsplit(".", 1)[0]
+        repo_url = f"{REPO_BLOB_URL}/{file_path}"
+
+        yield {
+            "file": file,
+            "file_path": file_path,
+            "pid": pid,
+            "ext": ext,
+            "repo_url": repo_url,
+        }
 
 # ---------- Cache helpers ----------
 
@@ -68,18 +104,18 @@ def _normalize_name(name: str) -> str:
 
 def _parse_pid(pid: str):
     """
-    From filename base like 'a_beautiful_matrix' return:
+    From filename base like 'a_beautiful_matrix' or 'A. Beautiful Matrix' return:
       index = 'A'
       raw_name = 'beautiful matrix'
     If it doesn't match expected pattern, return (None, None).
     """
-    base = pid  # pid is already without extension
-    parts = base.split("_")
-    if len(parts) < 2:
+    base = pid.strip()  # pid is already without extension
+    match = re.match(r"^([A-Za-z][A-Za-z0-9]{0,2})[\s._-]+(.+)$", base)
+    if not match:
         return None, None
 
-    index = parts[0].upper()  # 'A'
-    raw_name = " ".join(parts[1:])
+    index = match.group(1).upper()  # 'A'
+    raw_name = re.sub(r"[\s._-]+", " ", match.group(2)).strip()
     return index, raw_name
 
 
@@ -231,4 +267,3 @@ def generate_table_of_contents(lines):
             heading_slug = generate_slug(heading_text)
             toc.append(f"- [{heading_text}](#{heading_slug})\n")
     return toc
-

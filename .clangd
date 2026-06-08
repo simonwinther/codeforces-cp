@@ -1,0 +1,39 @@
+CompileFlags:
+  Add:
+    - -std=gnu++20
+    - -Wall
+    - -Wextra
+    - -Wshadow
+    - -Wconversion
+    - -Wno-sign-conversion
+    - -Wno-unused-parameter
+    - -Wno-unused-variable
+    - -DONLINE_JUDGE
+  Compiler: g++
+
+Diagnostics:
+  Suppress:
+    - unused-includes
+
+Completion:
+  AllScopes: true
+
+HeaderInsertion: Never
+
+InlayHints:
+  Enabled: true
+
+  # Keeps useful hints like:
+  # merge_intervals(xss: ...)
+  ParameterNames: true
+
+  # Shows inferred types for auto.
+  DeducedTypes: true
+
+  # Removes the ugly initializer-list hints:
+  # [0]=, [1]=, [2]= ...
+  Designators: false
+
+  # Shows hints at the end of long scopes.
+  # Usually annoying for CP.
+  BlockEnd: false

@@ -1,14 +1,12 @@
 # utilities/scripts/update_readme.py
 
-import os
-
 from util import (
     get_image,
-    image_mapper,
     load_cached_difficulties,
     save_cached_difficulties,
     get_problem_info,
     generate_table_of_contents,
+    iter_solution_files,
 )
 
 file_whitelist = {"bnn_accuracy.py", "testing_tool.py", "unununion_find.py"}
@@ -16,27 +14,16 @@ file_whitelist = {"bnn_accuracy.py", "testing_tool.py", "unununion_find.py"}
 difficulty_cache = load_cached_difficulties()
 contents = []
 
-# Iterate through files in the 'solutions' directory
-for file in sorted(os.listdir("solutions")):
-    file_path = os.path.join("solutions", file)
-
-    if not os.path.isfile(file_path):
-        continue
-
-    ext = file.split(".")[-1]
-    if ext not in image_mapper:
-        continue
-
-    pid = file.rsplit(".", 1)[0]  # 'a_beautiful_matrix'
-    repo_url = (
-        "https://github.com/simonwinther/codeforces-cp/blob/HEAD/solutions/"
-        f"{file}"
-    )
+for solution in iter_solution_files():
+    file = solution["file"]
+    file_path = solution["file_path"]
+    ext = solution["ext"]
+    pid = solution["pid"]
+    repo_url = solution["repo_url"]
 
     info = get_problem_info(pid, difficulty_cache)
     difficulty = info["difficulty"]
     codeforces_url = info["url"]
-    cf_code = info["code"]   # e.g. "263A" or pid
     cf_title = info["name"]  # "A. Beautiful Matrix"
 
     image_icon = (
@@ -118,4 +105,3 @@ if toc_start_index is not None and toc_end_index is not None:
 
 with open("README.md", "w", encoding="utf8") as f:
     f.writelines(lines)
-
