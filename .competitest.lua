@@ -19,6 +19,8 @@ return {
   testcases_input_file_format = "$(FNOEXT)_input$(TCNUM).txt",
   testcases_output_file_format = "$(FNOEXT)_output$(TCNUM).txt",
   testcases_single_file_format = "$(FNOEXT).testcases",
+  template_file = "$(ABSDIR)/template.$(FEXT)",
+  evaluate_template_modifiers = false,
   received_files_extension = "cpp",
   received_problems_path = received_problem_path,
   received_problems_prompt_path = false,
