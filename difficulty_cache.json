@@ -1,12 +1,4 @@
 {
-    "A. Elephant": {
-        "difficulty": "800",
-        "last_updated": "2026-06-08"
-    },
-    "C. Simple Repetition": {
-        "difficulty": "1000",
-        "last_updated": "2026-06-08"
-    },
     "a_beautiful_matrix": {
         "difficulty": "800",
         "last_updated": "2026-06-08"
@@ -51,8 +43,16 @@
         "difficulty": "800",
         "last_updated": "2026-06-08"
     },
+    "a_elephant": {
+        "difficulty": "800",
+        "last_updated": "2026-06-08"
+    },
     "a_soldier_and_bananas": {
         "difficulty": "800",
+        "last_updated": "2026-06-08"
+    },
+    "c_simple_repetition": {
+        "difficulty": "1000",
         "last_updated": "2026-06-08"
     }
 }

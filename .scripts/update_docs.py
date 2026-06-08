@@ -4,6 +4,7 @@ from util import (
     get_image,
     load_cached_difficulties,
     save_cached_difficulties,
+    prune_cached_difficulties,
     get_problem_info,
     iter_solution_files,
 )
@@ -14,6 +15,7 @@ file_whitelist = {"bnn_accuracy.py", "testing_tool.py", "unununion_find.py"}
 def build_problem_table():
     difficulty_cache = load_cached_difficulties()
     problem_rows = []
+    active_pids = []
 
     for solution in iter_solution_files():
         file = solution["file"]
@@ -26,6 +28,8 @@ def build_problem_table():
         url = info["url"]
         name = info["name"]
         code = info["code"]
+
+        active_pids.append(pid)
 
         # language icon
         lang_icon = ""
@@ -45,6 +49,7 @@ def build_problem_table():
 """
         problem_rows.append(row)
 
+    prune_cached_difficulties(difficulty_cache, active_pids)
     save_cached_difficulties(difficulty_cache)
     return problem_rows
 

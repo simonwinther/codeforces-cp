@@ -4,6 +4,7 @@ from util import (
     get_image,
     load_cached_difficulties,
     save_cached_difficulties,
+    prune_cached_difficulties,
     get_problem_info,
     generate_table_of_contents,
     iter_solution_files,
@@ -13,6 +14,7 @@ file_whitelist = {"bnn_accuracy.py", "testing_tool.py", "unununion_find.py"}
 
 difficulty_cache = load_cached_difficulties()
 contents = []
+active_pids = []
 
 for solution in iter_solution_files():
     file = solution["file"]
@@ -20,6 +22,8 @@ for solution in iter_solution_files():
     ext = solution["ext"]
     pid = solution["pid"]
     repo_url = solution["repo_url"]
+
+    active_pids.append(pid)
 
     info = get_problem_info(pid, difficulty_cache)
     difficulty = info["difficulty"]
@@ -42,6 +46,7 @@ for solution in iter_solution_files():
     contents.append([pid, row])
 
 # Save the updated difficulties cache
+prune_cached_difficulties(difficulty_cache, active_pids)
 save_cached_difficulties(difficulty_cache)
 
 # ---------- Update the solved stats section ----------

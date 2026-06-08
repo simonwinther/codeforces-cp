@@ -97,6 +97,13 @@ def save_cached_difficulties(cache: dict, cache_file: str = "difficulty_cache.js
     with open(cache_file, "w") as f:
         json.dump(cache, f, indent=4)
 
+
+def prune_cached_difficulties(cache: dict, active_pids) -> None:
+    active_pids = set(active_pids)
+    for pid in list(cache):
+        if pid not in active_pids:
+            del cache[pid]
+
 # ---------- Codeforces helpers ----------
 
 _CF_PROBLEMS_BY_INDEX_AND_NAME = None  # (INDEX, norm_name) -> problem dict
