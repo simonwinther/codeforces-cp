@@ -3,6 +3,7 @@ import os
 import json
 import re
 from datetime import datetime
+from urllib.parse import quote
 
 import requests
 
@@ -36,6 +37,10 @@ def get_image(ext: str, size: int = 24) -> str:
     )
 
 
+def encode_path(path: str) -> str:
+    return quote(path, safe="/")
+
+
 # ---------- Solution discovery ----------
 
 def iter_solution_files(solution_dir: str = SOLUTIONS_DIR):
@@ -59,11 +64,13 @@ def iter_solution_files(solution_dir: str = SOLUTIONS_DIR):
             continue
 
         pid = file.rsplit(".", 1)[0]
-        repo_url = f"{REPO_BLOB_URL}/{file_path}"
+        markdown_path = encode_path(file_path)
+        repo_url = f"{REPO_BLOB_URL}/{markdown_path}"
 
         yield {
             "file": file,
             "file_path": file_path,
+            "markdown_path": markdown_path,
             "pid": pid,
             "ext": ext,
             "repo_url": repo_url,

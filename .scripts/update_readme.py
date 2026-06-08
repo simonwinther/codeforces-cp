@@ -16,7 +16,7 @@ contents = []
 
 for solution in iter_solution_files():
     file = solution["file"]
-    file_path = solution["file_path"]
+    markdown_path = solution["markdown_path"]
     ext = solution["ext"]
     pid = solution["pid"]
     repo_url = solution["repo_url"]
@@ -27,7 +27,7 @@ for solution in iter_solution_files():
     cf_title = info["name"]  # "A. Beautiful Matrix"
 
     image_icon = (
-        f"[![{ext}]({get_image(ext)})]({file_path})"
+        f"[![{ext}]({get_image(ext)})]({markdown_path})"
         if file not in file_whitelist
         else ""
     )
