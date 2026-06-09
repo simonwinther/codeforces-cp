@@ -1,58 +1,62 @@
 {
     "a_beautiful_matrix": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_bit": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_boy_or_girl": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_convergence": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_domino_piling": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_helpful_maths": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_next_round": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_watermelon": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_way_too_long_words": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_word_capitalization": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "b_queue_at_the_school": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_elephant": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "a_soldier_and_bananas": {
         "difficulty": "800",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
     },
     "c_simple_repetition": {
         "difficulty": "1000",
-        "last_updated": "2026-06-08"
+        "last_updated": "2026-06-09"
+    },
+    "a_string_task": {
+        "difficulty": "N/A",
+        "last_updated": "2026-06-09"
     }
 }
