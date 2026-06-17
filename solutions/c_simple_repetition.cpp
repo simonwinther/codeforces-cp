@@ -39,7 +39,7 @@ int is_prime(long long n) {
   return 1;
 }
 
-int main() {
+int main_imperative() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
@@ -54,11 +54,35 @@ int main() {
     // 52 * 10^4 + 52 * 10^2 + 52
     for (int i = 0; i < k; i++) {
       // If 0-9 steps=1, if 10-99 then steps=2, if 100-999 then steps=3, ...
-      // x * 10^(ceil(log_10(x+1)))=ceil((x+1))
       int steps = ceil(log10(x + 1));
       //
       y += x * pow(10, steps * i);
     }
+    if (is_prime(y))
+      cout << "YES" << endl;
+    else
+      cout << "NO" << endl;
+  }
+
+  return 0;
+}
+
+// I did the math for this, check image:
+// ../images/2093C - Simple Repetition.jpg
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int t;
+  cin >> t;
+
+  while (t--) {
+    long long x, k;
+    cin >> x >> k;
+
+    // 52 * 10^4 + 52 * 10^2 + 52
+    long long y = log10(x) + ceil(log10(x + 1)) + (k * (k + 1)) / 2.0;
+
     if (is_prime(y))
       cout << "YES" << endl;
     else
