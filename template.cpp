@@ -2,6 +2,8 @@
 #include <pthread.h>
 #include <unistd.h>
 
+#define ll long long
+
 using namespace std;
 
 int main() {
