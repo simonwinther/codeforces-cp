@@ -1,7 +1,33 @@
+# Ignore extensionless compiled problem binaries
+*
+!*/
+!*.*
+
+# Keep important extensionless files
+!.gitignore
+!Makefile
+!makefile
+!README*
+!LICENSE*
+!Dockerfile
+
+# Generated/test files, keep these LAST so they do not get re-included
 .ast/
+.ast/**
 .testcases/
+.testcases/**
 *.testcases
 *_input*.txt
 *_output*.txt
+
+# Python
 __pycache__/
+__pycache__/**
 *.pyc
+
+# C++ compiled output
+*.o
+*.obj
+*.out
+*.exe
+a.out
