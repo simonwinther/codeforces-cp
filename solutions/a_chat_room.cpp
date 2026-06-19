@@ -22,3 +22,20 @@ int main() {
   cout << (candidates.empty() ? "YES" : "NO");
   return 0;
 }
+
+int alternative() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  string s;
+  cin >> s;
+  string target = "hello";
+  string::reverse_iterator it = s.rbegin();
+  while (it != s.rend() && !target.empty()) {
+    if (target.back() == *it)
+      target.pop_back();
+    ++it;
+  }
+  cout << (target.empty() ? "YES" : "NO");
+  return 0;
+}
