@@ -14,5 +14,12 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
+  int n, t;
+  cin >> n >> t;
+
+  vll num(n);
+  for (ll &x : num)
+    cin >> x;
+
   return 0;
 }
