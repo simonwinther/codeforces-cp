@@ -145,5 +145,12 @@
         "url": "https://codeforces.com/problemset/problem/489/B",
         "code": "489B",
         "last_updated": "2026-06-28"
+    },
+    "a_gravity_flip": {
+        "difficulty": "900",
+        "name": "A. Gravity Flip",
+        "url": "https://codeforces.com/problemset/problem/405/A",
+        "code": "405A",
+        "last_updated": "2026-06-28"
     }
 }
